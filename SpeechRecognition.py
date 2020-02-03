@@ -5,8 +5,8 @@
 #Example 1
 import speech_recognition as sr
 r = sr.Recognizer()
-with sr.Microphone() as source:                # use the default microphone as the audio source
-    audio = r.listen(source)                   # listen for the first phrase and extract it into audio data
+with sr.Microphone() as source:                # first, use the default microphone as the audio source
+    audio = r.listen(source)                   # then, listen for the first phrase and extract it into audio data
 
 try:
     print("You said " + r.recognize(audio))    # recognize speech using Google Speech Recognition
